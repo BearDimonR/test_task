@@ -11,15 +11,15 @@ Test task
 import re
 
 def lucky(series_sequence):
-    match = re.findall(r'6+5+[56]*|5+6+[56]*', series_sequence)
-    return max(match) if len(match) > 0 else 0
+    match = re.findall(r'6+5+[56]*|5+6+[56]*', str(series_sequence))
+    return int(max(match)) if len(match) > 0 else 0
 
 tests = [
-    ('5656556565', '5656556565'),
-    ('4556432455665334', '55665'),
-    ('55555', 0),
-    ('666', 0),
-    ('656655565', '656655565')
+    (5656556565, 5656556565),
+    (4556432455665334, 55665),
+    (55555, 0),
+    (666, 0),
+    (656655565, 656655565)
 ]
 
 for input_sq, output_sq in tests:
