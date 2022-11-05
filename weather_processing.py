@@ -53,7 +53,7 @@ def fix_na_numeric_columns(df):
     df = df.apply(lambda row: row.fillna(row.mean()), axis=1)
     return df
 
-# check for outliers (like -123 and 1. for loc11)
+# check for outliers (like -123 for loc11)
 IQR_RATE = 12
 def fix_outlier_numeric_values(df):
     q1 = df.quantile(.25, axis=1)
@@ -113,4 +113,4 @@ print('\n\nFind the average windspeed in January for each location\n', january_m
 print('\n\nDownsample the record to a yearly frequency for each location\n', yearly)
 print('\n\nDownsample the record to a monthly frequency for each location\n', monthly)
 print('\n\nDownsample the record to a weekly frequency for each location\n', weekly)
-print('\n\nalculate the min, max and mean windspeeds and standard deviations of the windspeeds across all locations for each week (assume that the first week starts on January 2 1961) for the first 21 weeks\n', first_weeks_stats)
+print('\n\nCalculate the min, max and mean windspeeds and standard deviations of the windspeeds across all locations for each week (assume that the first week starts on January 2 1961) for the first 21 weeks\n', first_weeks_stats)
