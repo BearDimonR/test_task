@@ -14,6 +14,8 @@ def lucky(series_sequence):
     match = re.findall(r'6+5+[56]*|5+6+[56]*', str(series_sequence))
     return int(max(match)) if len(match) > 0 else 0
 
+
+# tests
 tests = [
     (5656556565, 5656556565),
     (4556432455665334, 55665),
